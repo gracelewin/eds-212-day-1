@@ -1,0 +1,101 @@
+---
+title: 'Section 3: R Projects and functions'
+author: "Grace Lewin"
+date: "8/2/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+```
+
+
+# Section 3:
+
+## R
+
+### Projects
+
+*and*
+
+**functions**
+
+This is a^superscript!!^
+
+This is a ~subscript.....~
+
+-   This
+
+-   is
+
+-   a
+
+-   list
+
+-   with
+
+-   bullet
+
+-   points!
+
+
+![So many trees!](Redwoods.jpg)
+
+```{r}
+
+W <- function(a, b, L) {
+  
+  a*(L)^b
+  
+}
+
+Milkfish_mass = W(a = 0.0905, 
+                  b = 2.52, 
+                  L = 60)
+Milkfish_mass
+
+Giant_trev_mass = W(a = 0.0353,
+                    b = 3.05,
+                    L = 60)
+Giant_trev_mass
+
+Great_barr_mass = W(a = 0.0181,
+                    b = 3.27,
+                    L = 60)
+Great_barr_mass
+```
+
+
+```{r}
+fish_length <- seq(from = 1, to = 200, by = 1)
+
+# Estimate weight for giant barracudas
+barracuda_weight = W(a = 0.0181,
+                    b = 3.27,
+                    L = fish_length)
+
+
+# Bind the lengths and estimated barracuda lengths into a single data frame
+
+barracuda_df = data.frame(fish_length, barracuda_weight)
+
+
+```
+
+
+```{r}
+#Create a ggplot graph of length versus weight for giant barracuda
+
+ggplot(data = barracuda_df, 
+        aes(x = fish_length,
+            y = barracuda_weight)) +
+  geom_point() +
+  labs(x = "Fish Length",
+       y = "Giant Barracuda weights",
+       title = "Length vs. weight for giant barracuda")
+```
+
