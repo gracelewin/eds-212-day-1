@@ -209,6 +209,8 @@ pre code {
   
 }
 
+# Test out your function to find the mass (g) for a 60 cm fish of the following species (parameter estimates from Peyton et al. (2016)):
+
 Milkfish_mass = W(a = 0.0905, 
                   b = 2.52, 
                   L = 60)
@@ -224,7 +226,8 @@ Giant_trev_mass</code></pre>
                     L = 60)
 Great_barr_mass</code></pre>
 <pre><code>## [1] 11809.54</code></pre>
-<pre class="r"><code>fish_length &lt;- seq(from = 1, to = 200, by = 1)
+<pre class="r"><code>#Make and store (as fish_length) sequence of size ranges from 0 to 200 cm, by increments of 1 cm
+fish_length &lt;- seq(from = 1, to = 200, by = 1)
 
 # Estimate weight for giant barracudas
 barracuda_weight = W(a = 0.0181,

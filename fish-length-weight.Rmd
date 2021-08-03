@@ -53,6 +53,8 @@ W <- function(a, b, L) {
   
 }
 
+# Test out your function to find the mass (g) for a 60 cm fish of the following species (parameter estimates from Peyton et al. (2016)):
+
 Milkfish_mass = W(a = 0.0905, 
                   b = 2.52, 
                   L = 60)
@@ -71,6 +73,7 @@ Great_barr_mass
 
 
 ```{r}
+#Make and store (as fish_length) sequence of size ranges from 0 to 200 cm, by increments of 1 cm
 fish_length <- seq(from = 1, to = 200, by = 1)
 
 # Estimate weight for giant barracudas
